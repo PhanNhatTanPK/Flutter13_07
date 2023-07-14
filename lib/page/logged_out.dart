@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1307/page/Login.dart';
-import 'package:flutter1307/page/Register.dart';
-import 'package:flutter1307/widgets/BottomBar.dart';
-import 'package:flutter1307/widgets/MyElevatedButton.dart';
+import 'package:flutter1307/page/login.dart';
+import 'package:flutter1307/page/register.dart';
+import 'package:flutter1307/widgets/bottom_bar.dart';
+import 'package:flutter1307/widgets/my_elevated_button.dart';
 
 class LoggedOut extends StatelessWidget {
   const LoggedOut({super.key});

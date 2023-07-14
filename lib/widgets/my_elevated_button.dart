@@ -12,7 +12,7 @@ class MyElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: func,
-        style: OutlinedButton.styleFrom(
+        style: ElevatedButton.styleFrom(
             padding: EdgeInsets.all(2),
             backgroundColor: Colors.black,
             fixedSize: Size(widthButton, heightButton),

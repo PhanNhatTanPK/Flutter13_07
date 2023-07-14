@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1307/page/Register2.dart';
-import 'package:flutter1307/widgets/MyElevatedButton.dart';
-import 'package:flutter1307/widgets/MyTextField.dart';
-import 'package:flutter1307/widgets/StatusBar.dart';
+import 'package:flutter1307/page/register2.dart';
+import 'package:flutter1307/widgets/my_elevated_button.dart';
+import 'package:flutter1307/widgets/my_text_field.dart';
+import 'package:flutter1307/widgets/status_bar.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
