@@ -16,18 +16,22 @@ class MyOutlineButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-        onPressed: func,
-        child: Text(nameButton,
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 13,
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w900,
-                letterSpacing: 0.52)),
-        style: OutlinedButton.styleFrom(
-          fixedSize: Size(widthButton, heightButton),
-          side: BorderSide(color: Colors.black, width: 1),
-        ));
+    return Container(
+      height: 52,
+      margin: EdgeInsets.only(left: 16, top: 32),
+      child: OutlinedButton(
+          onPressed: func,
+          child: Text(nameButton,
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 13,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 0.52)),
+          style: OutlinedButton.styleFrom(
+            fixedSize: Size(widthButton, heightButton),
+            side: BorderSide(color: Colors.black, width: 1),
+          )),
+    );
   }
 }

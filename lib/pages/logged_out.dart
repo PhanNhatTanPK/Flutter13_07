@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1307/page/login.dart';
-import 'package:flutter1307/page/register.dart';
+
+import 'package:flutter1307/pages/login.dart';
+import 'package:flutter1307/pages/register.dart';
+
 import 'package:flutter1307/widgets/bottom_bar.dart';
 import 'package:flutter1307/widgets/my_elevated_button.dart';
 

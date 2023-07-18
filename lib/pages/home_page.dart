@@ -1,12 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter1307/model/item.dart';
+
+import 'package:flutter1307/models/item.dart';
 import 'package:flutter1307/widgets/card.dart';
 import 'package:flutter1307/widgets/image_item.dart';
 import 'package:flutter1307/widgets/my_bottom_bar.dart';
+
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import '../model/card_item.dart';
+import '../models/card_item.dart';
+
 import '../widgets/my_outline_button.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,16 +43,58 @@ class _HomePageState extends State<HomePage> {
         name: "Simon Zhu",
         link: "@smnzhu"),
   ];
-  
-  List<Item> listImage = [
-    Item(imageURL: "images/Rectangle 2.png"),
-    Item(imageURL: "images/Rectangle 2.1.png"),
-    Item(imageURL: "images/Rectangle 2.2.png"),
-    Item(imageURL: "images/Rectangle 2.3.png"),
-    Item(imageURL: "images/Rectangle 2.4.png"),
-    Item(imageURL: "images/Rectangle 2.5.png"),
-    Item(imageURL: "images/Rectangle 2.6.png"),
-    Item(imageURL: "images/Rectangle 2.7.png"),
+
+  List<CartItem> listImage = [
+    CartItem(
+        image: "images/Rectangle 2.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.1.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.2.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.3.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.4.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.5.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.6.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.7.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.12.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
+    CartItem(
+        image: "images/Rectangle 2.13.png",
+        avatar: "images/Ellipse3.png",
+        name: "Simon Zhu",
+        link: "@smnzhu"),
   ];
 
   @override
@@ -124,27 +170,25 @@ class _HomePageState extends State<HomePage> {
               // List picture
               Container(
                   height: 400,
+                  margin: EdgeInsets.only(left: 11, right: 11),
                   child: StaggeredGridView.countBuilder(
                     crossAxisCount: 2,
-                    itemBuilder: (context, index)=> ImageItem(item: listImage[index]),
+                    itemBuilder: (context, index) =>
+                        ImageItem(item: listImage[index]),
                     staggeredTileBuilder: (index) => StaggeredTile.fit(1),
-                    mainAxisSpacing: 0,
-                    crossAxisSpacing: 0,
-                    itemCount: 8,
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 8,
+                    itemCount: 10,
                   )),
 
               //Button See more
               Row(
                 children: [
-                  Container(
-                    height: 52,
-                    margin: EdgeInsets.only(left: 16, top: 32),
-                    child: MyOutlineButton(
-                      nameButton: 'SEE MORE',
-                      widthButton: 380,
-                      heightButton: 52,
-                      func: () {},
-                    ),
+                  MyOutlineButton(
+                    nameButton: 'SEE MORE',
+                    widthButton: 380,
+                    heightButton: 52,
+                    func: () {},
                   ),
                 ],
               ),
@@ -154,22 +198,7 @@ class _HomePageState extends State<HomePage> {
       ),
 
       //Bottom Navigation
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(color: Colors.white, boxShadow: [
-          BoxShadow(
-            color: Color(0x4C000000),
-            blurRadius: 0,
-            offset: Offset(0, -0.50),
-            spreadRadius: 0,
-          )
-        ]),
-        child: BottomAppBar(
-          height: 83,
-          shape: CircularNotchedRectangle(),
-          child: MyBottomBar(),
-          elevation: 0,
-        ),
-      ),
+      bottomNavigationBar: MyBottomBar(),
     );
   }
 }

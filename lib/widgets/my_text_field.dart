@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
-  const MyTextField(
-      {Key? key, required this.fieldName, required this.myController})
+  MyTextField(
+      {Key? key, required this.fieldName,  this.myController, this.validator})
       : super(key: key);
 
   final String fieldName;
-  final TextEditingController myController;
+  TextEditingController? myController;
+  String? Function(String?)? validator;
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +19,8 @@ class MyTextField extends StatelessWidget {
       //   shape: RoundedRectangleBorder(side: BorderSide(width: 2))
       // ),
       child: TextFormField(
+        validator: validator,
         controller: myController,
-        validator: (value){
-          if(value == null || value.isEmpty) {
-            return "Please enter some text";
-          }
-          else null;
-        },
         decoration: InputDecoration(
           labelText: fieldName,
           border: OutlineInputBorder(),
